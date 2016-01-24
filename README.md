@@ -1,4 +1,4 @@
-boira
+Boira
 =====
 
-theme jekyll
+Jekyll theme: http://jorgeatgu.com/blog/
