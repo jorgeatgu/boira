@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <article class="article-contenido">
+        {{ content }}
+    </article>
+
+    {% include footer-image.html %}
+
+    <script type="text/javascript">
+    	$(document).ready(function() {
+
+    	$('.primera-imagen, .segunda-imagen').magnificPopup({
+    		type: 'image',
+    		closeOnContentClick: true,
+    		mainClass: 'mfp-img-mobile',
+    		image: {
+    			verticalFit: true
+    		}
+
+    	});
+
+    });
+    </script>
+
+    <style type="text/css">
+        /* padding-bottom and top for image */
+        .mfp-no-margins img.mfp-img {
+          padding: 0;
+        }
+        /* position of shadow behind the image */
+        .mfp-no-margins .mfp-figure:after {
+          top: 0;
+          bottom: 0;
+        }
+        /* padding for main container */
+        .mfp-no-margins .mfp-container {
+          padding: 0;
+        }
+
+    </style>
+
+  </body>
+
+</html>

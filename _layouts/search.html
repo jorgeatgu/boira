@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head-search.html %}
+
+  <body>
+
+    {% include header.html %}
+    	<h1>BUSCADOR</h1>
+    	<form action="search.html">
+		<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+		</form>
+		<div id="tipue_search_content"></div>
+
+			<script>
+				$(document).ready(function() {
+				     $('#tipue_search_input').tipuesearch();
+				});
+			</script>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
