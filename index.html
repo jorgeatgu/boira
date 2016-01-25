@@ -1,0 +1,59 @@
+---
+layout: default
+title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
+---
+
+
+  <div class="post-contenido enlaces">
+    <a class="btn-index" href="{{ site.baseurl }}/search.html">Buscador</a>
+    <a class="btn-index" href="{{ site.baseurl }}/categories.html">Categorias</a>
+    <a class="btn-index" href="http://feedpress.me/scalable">RSS</a>
+  </div>
+
+  <section class="post-contenido">
+
+  {% for post in paginator.posts %}
+    <h1>
+      <a class="categoria-titulo-index" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h1>
+        <span class="post-autores-categoria">
+        El
+        {{ post.date | date: "%-d" }} de
+        {% assign m = post.date | date: "%-m" %}
+        {% case m %}
+          {% when '1' %}enero
+          {% when '2' %}febrero
+          {% when '3' %}marzo
+          {% when '4' %}abril
+          {% when '5' %}mayo
+          {% when '6' %}junio
+          {% when '7' %}julio
+          {% when '8' %}agosto
+          {% when '9' %}septiembre
+          {% when '10' %}octubre
+          {% when '11' %}noviembre
+          {% when '12' %}diciembre
+        {% endcase %}
+        de
+        {{ post.date | date: "%Y" }}
+
+        </span>
+  <article class="border-excerpt">{{ post.excerpt | truncatewords: 70 }} </article>
+
+    {% endfor %}
+
+  </section>
+
+<!-- Pagination links -->
+<article class="paginacion">
+  {% if paginator.previous_page %}
+   <a class="btn-anterior" href="{{ site.baseurl}}/page{{ paginator.previous_page }}/">Página anterior</a>
+  {% else %}
+
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="btn-posterior" href="{{ site.baseurl}}/page{{ paginator.next_page }}/" class="next">Página posterior</a>
+  {% else %}
+
+  {% endif %}
+</article>
