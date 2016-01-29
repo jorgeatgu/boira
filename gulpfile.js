@@ -17,9 +17,9 @@ var postCSS_InlineComment = require('postcss-inline-comment');
 
 
 var imgSrc = './src/img/*';
-var imgDist = './dist/img';
+var imgDist = './img';
 var jsSrc = './src/js/*.js';
-var jsDist = './dist/js';
+var jsDist = './js';
 
 function errorAlertJS(error) {
     notify.onError({
@@ -94,19 +94,19 @@ gulp.task('css', function() {
         .pipe(postcss(processors))
         .on("error", errorAlertPost)
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./css'))
         .pipe(notify({
             message: 'postCSS complete'
         }));
 });
 
 gulp.task('minify', function() {
-    return gulp.src('./dist/css/styles.css')
+    return gulp.src('./css/styles.css')
         .pipe(nano())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./css'))
         .pipe(notify({
             message: 'CSSnano task complete'
         }));
@@ -116,5 +116,5 @@ gulp.task('default', function() {
     gulp.watch('./src/css/*.css', ['css']);
     gulp.watch('./src/img/**', ['images']);
     gulp.watch('./src/js/**', ['compress']);
-    gulp.watch('./dist/css/*.css', ['minify']);
+    gulp.watch('./css/*.css', ['minify']);
 });
