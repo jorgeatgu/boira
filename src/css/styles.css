@@ -3,31 +3,7 @@
 @import '_header';
 @import '_layout';
 @import '_footer';
+@import '_highlight';
+@import '_comunes';
+@import '_categories';
 @import '_responsive';
-
-
-.boton-shortcode {
-    text-align: center;
-    color: #271764 ;
-    border: 1px solid #271764;
-    padding: 1em 2em;
-    margin: 1em;
-    display: inline-block;
-    text-decoration: none;
-    background: #E1DCE3;
-    font-size: .9;
-    font-family: "proxima-nova", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: background .3s;
-    border-radius: 2px;
-}
-
-.boton-shortcode:hover {
-    background: none;
-}
-
-.boton-centrar {
-    text-align: center;
-}
