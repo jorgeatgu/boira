@@ -6,10 +6,9 @@ permalink: /mi-experiencia-con-svg/
 comments: true
 dsq_thread_id:
   - 2098952997
-category:
+categories:
   - CSS3
   - SVG
-tags: [SVG]
 ---
 La primera vez que oí hablar de **SVG** todavía estudiaba **Artes Gráficas** y de eso ya hace un tiempo, por aquel entonces la verdad es que no le preste mucha atención ya que en ese momento no le encontraba utilidad alguna, pero este interés cambio hace unos meses a raíz de un artículo que leí en sitepoint. Una vez renovado mi interés me puse a buscar información en castellano y no encontré mucha información mas allá de una <a href="http://www.desarrolloweb.com/manuales/29/" target="_blank">guía bastante antigua en desarrollo web</a> y un post bastante interesante en <a href="http://minid.net/2012/10/26/descubre-el-fabuloso-mundo-de-svg/" target="_blank">minid.net</a>, así que tras leer bastantes artículos en inglés y experimentar mucho mas con Adobe Illustrator aquí esta mi experiencia exportando **SVG**(con fuentes) para mi [web][1].
 
