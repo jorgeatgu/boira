@@ -1,11 +1,3 @@
-@import '_reset';
-@import '_variables';
-@import '_header';
-@import '_layout';
-@import '_footer';
-@import '_responsive';
-
-
 .boton-shortcode {
     text-align: center;
     color: #271764 ;
@@ -30,4 +22,14 @@
 
 .boton-centrar {
     text-align: center;
+}
+
+
+#disqus_thread {
+    padding-bottom: 3em;
+}
+
+
+#twitter-widget-1 {
+  margin: 0 auto !important;
 }

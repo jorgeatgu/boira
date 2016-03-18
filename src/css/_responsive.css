@@ -1,0 +1,78 @@
+/* ===== == = === desde 48em (768px) === = == ===== */
+
+@media only screen and (min-width: 48em) {
+    nav {
+        width: 70%;
+        display: inline-block;
+        padding-top: 15px;
+    }
+    .menu-principal {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+        display: inline-block;
+    }
+    .menu-principal li {
+        width: auto;
+        border: 0;
+        margin-right: 3%;
+    }
+    .menu-principal li a {
+        font-size: 1.1em;
+        padding: 0;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        box-sizing: border-box;
+        width: auto;
+        letter-spacing: 2px;
+        display: inline-block;
+        border-bottom: 0 solid black;
+    }
+    .menu-principal li a:hover {
+        background: none;
+        color: crimson;
+        border-bottom: 3px solid #000;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .social-header.post-contenido {
+        width: 49%;
+        display: inline-block;
+        text-align: right;
+    }
+    img,
+    iframe {
+        max-width: 600px;
+    }
+    .post-contenido {
+        font-size: 1.25em;
+        line-height: 1.4em;
+    }
+    li {
+        display: inline;
+        margin: 0 auto;
+    }
+    .comments,
+    .post-contenido {
+        width: 85%;
+    }
+}
+/* ===== == = === 64em (1024px) === = == ===== */
+
+@media only screen and (min-width: 64em) {
+    .post-contenido,
+    .categoria-titulo {
+        max-width: 65%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* ===== == = === 64em (1367px) === = == ===== */
+
+@media only screen and (min-width: 85.4375em) {
+    .post-contenido,
+    .categoria-titulo {
+        max-width: 55%;
+    }
+}
