@@ -26,4 +26,4 @@ Facebook: https://facebok.com/jorgeatgu
 Vimeo: https://vimeo.com/jorgeatgu
 dribbble: http://www.dribbble.com/jorgeATGU
 
-exclude: [ .gitignore, .tweet-cache ]
+exclude: [ .gitignore, .tweet-cache, _posts ]
