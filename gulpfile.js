@@ -1,19 +1,18 @@
 var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('gulp-autoprefixer');
-var vars = require('postcss-simple-vars');
-var nested = require('postcss-nested');
-var pxtorem = require('postcss-pxtorem');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var uglify = require('gulp-uglify');
-var newer = require('gulp-newer');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var nano = require('gulp-cssnano');
-var atImport = require('postcss-import');
-var notify = require("gulp-notify");
-var postCSS_InlineComment = require('postcss-inline-comment');
+postcss = require('gulp-postcss');
+autoprefixer = require('gulp-autoprefixer');
+sourcemaps = require('gulp-sourcemaps');
+atImport = require('postcss-import');
+postCSS_InlineComment = require('postcss-inline-comment');
+cssnext = require('postcss-cssnext');
+sorting = require('postcss-sorting');
+nested = require('postcss-nested');
+pxtorem = require('postcss-pxtorem');
+uglify = require('gulp-uglify');
+newer = require('gulp-newer');
+rename = require('gulp-rename');
+nano = require('gulp-cssnano');
+notify = require("gulp-notify");
 
 
 var imgSrc = './src/img/*';
@@ -41,27 +40,6 @@ function errorAlertPost(error) {
     this.emit("end");
 };
 
-gulp.task('imagemin', function() {
-    return gulp.src(imgSrc)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{
-                removeViewBox: false
-            }],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest(imgDist));
-});
-
-
-
-gulp.task('images', function() {
-    return gulp.src(imgSrc)
-        .pipe(newer(imgDist))
-        .pipe(imagemin())
-        .pipe(gulp.dest(imgDist));
-});
-
 gulp.task('compress', function() {
     return gulp.src(jsSrc)
         .pipe(uglify())
@@ -76,16 +54,18 @@ gulp.task('compress', function() {
 gulp.task('css', function() {
     var processors = [
         atImport,
-        vars,
         nested,
+        cssnext,
         pxtorem({
             root_value: 16,
             unit_precision: 2,
-            prop_white_list: ['font-size', 'line-height', 'padding'],
+            prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'padding'],
             replace: true,
             media_query: false
         }),
-        postCSS_InlineComment,
+        sorting({
+            "sort-order": "csscomb"
+        }),
         autoprefixer
     ];
     return gulp.src('./src/css/styles.css')
@@ -103,9 +83,6 @@ gulp.task('css', function() {
 gulp.task('minify', function() {
     return gulp.src('./css/styles.css')
         .pipe(nano())
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(gulp.dest('./css'))
         .pipe(notify({
             message: 'CSSnano task complete'
@@ -115,6 +92,5 @@ gulp.task('minify', function() {
 gulp.task('default', function() {
     gulp.watch('./src/css/*.css', ['css']);
     gulp.watch('./src/img/**', ['images']);
-    gulp.watch('./src/js/**', ['compress']);
     gulp.watch('./css/*.css', ['minify']);
 });
