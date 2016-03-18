@@ -1,14 +1,11 @@
 {
-  "name": "mapa-comercios-creativos-zaragoza",
-  "version": "1.0.0",
-  "description": "Un mapa que muestra los diversos comercios creativos de Zaragoza",
+  "name": "Boira",
+  "version": "2.0.0",
+  "description": "Jekyll theme",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
-    "svg",
-    "velocity"
+    "jekyll",
+    "blog"
   ],
   "author": "Jorge Aznar",
   "license": "ISC",
@@ -23,14 +20,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
-    "postcss-import": "^7.1.3",
+    "npm-check-updates": "^2.5.8",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
     "postcss-inline-comment": "^2.0.0",
     "postcss-nested": "^1.0.0",
     "postcss-pxtorem": "^3.3.1",
-    "postcss-simple-vars": "^1.2.0",
-    "through2": "^2.0.0"
-  },
-  "dependencies": {
-    "imagemin-pngquant": "^4.2.0"
+    "postcss-sorting": "^1.2.0"
   }
 }

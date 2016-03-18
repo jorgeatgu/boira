@@ -75,10 +75,9 @@ gulp.task('compress', function() {
 
 gulp.task('css', function() {
     var processors = [
+        atImport,
         vars,
         nested,
-        atImport,
-        autoprefixer,
         pxtorem({
             root_value: 16,
             unit_precision: 2,
@@ -86,7 +85,8 @@ gulp.task('css', function() {
             replace: true,
             media_query: false
         }),
-        postCSS_InlineComment
+        postCSS_InlineComment,
+        autoprefixer
     ];
     return gulp.src('./src/css/styles.css')
 
