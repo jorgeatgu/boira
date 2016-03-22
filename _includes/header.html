@@ -1,28 +1,32 @@
-<header class="article-contenido">
-    <nav class="proxima-nova  post-contenido">
+<header class="header">
+    <nav class="header-nav  post-contenido">
         <ul class="menu-principal">
-            <li><a href="{{ site.url | replace:'blog','' }}index">WEB</a></li>
-            <li><a href="{{ site.url }}">BLOG</a></li>
+            <li class="menu-principal-li">
+                <a href="{{ site.url | replace:'blog','' }}index">WEB</a>
+                </li>
+            <li class="menu-principal-li">
+                <a href="{{ site.url }}">BLOG</a>
+            </li>
         </ul>
-        <ul class="social-header  post-contenido">
-            <a target="_blank" href="{{ site.twitter }}" title="Twitter">
+        <ul class="header-social">
+            <a class="header-social-icons" href="{{ site.twitter }}" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#twitter" />
+                    <use xlink:href="{{ site.urliconos }}#twitter"/>
                 </svg>
             </a>
-            <a target="_blank" href="{{ site.CodePen }}" title="codepen">
+            <a class="header-social-icons" href="{{ site.CodePen }}" title="Codepen">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#codepen" />
+                    <use xlink:href="{{ site.urliconos }}#codepen"/>
                 </svg>
             </a>
-            <a target="_blank" href="{{ site.GitHub }}" title="GitHub">
+            <a class="header-social-icons" href="{{ site.GitHub }}" title="GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#github" />
+                    <use xlink:href="{{ site.urliconos }}#github"/>
                 </svg>
             </a>
-            <a target="_blank" href="{{ site.Behance }}" title="behance">
+            <a class="header-social-icons" href="{{ site.Behance }}" title="behance">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#behance" />
+                    <use xlink:href="{{ site.urliconos }}#behance"/>
                 </svg>
             </a>
         </ul>

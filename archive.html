@@ -5,7 +5,7 @@ permalink: "archive/index.html"
 ---
 <article class="post-contenido">
 {% for post in site.posts %}
-  <p class="post-autores-categoria">
+  <p class="articulo-fecha">
   {% assign newer_post_month_year = post.next.date | date: "%-d %m %Y" %}
   {{ post.date | date: "%-d" }} de
             {% assign m = post.date | date: "%-m" %}
@@ -27,7 +27,7 @@ permalink: "archive/index.html"
             {{ post.date | date: "%Y" }}
   </p>
   {% if post_month_year != newer_post_month_year %}
-    <h2 class="post-autores-categoria">
+    <h2 class="articulo-fecha">
       {{ post_month_year }}
     </h2º>
   {% endif %}

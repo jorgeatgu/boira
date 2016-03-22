@@ -73,7 +73,9 @@ gulp.task('css', function() {
     .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .on("error", errorAlertPost)
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('./css', {
+            sourceRoot: '/src'
+        }))
         .pipe(gulp.dest('./css'))
         .pipe(notify({
             message: 'postCSS complete'
@@ -89,8 +91,29 @@ gulp.task('minify', function() {
         }));
 });
 
+gulp.task('imagemin', function() {
+    return gulp.src(imgSrc)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(imgDist));
+});
+
+
+
+gulp.task('images', function() {
+    return gulp.src(imgSrc)
+        .pipe(newer(imgDist))
+        .pipe(imagemin())
+        .pipe(gulp.dest(imgDist));
+});
+
+
 gulp.task('default', function() {
     gulp.watch('./src/css/*.css', ['css']);
     gulp.watch('./src/img/**', ['images']);
-    gulp.watch('./css/*.css', ['minify']);
 });
