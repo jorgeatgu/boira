@@ -1,7 +1,7 @@
 # Inicio
 name: Scalable
 description: Un blog sobre SVG · CSS3 · HTML5
-themeJekyll: Boira
+themeJekyll: Amanixer
 version: 1.0.0
 timezone: Europe/Madrid
 
@@ -12,7 +12,7 @@ paginate: 5
 paginate_path: "page:num"
 highlighter: pygments
 markdown: kramdown
-urliconos: img/social-sprite.svg
+urliconos: http://www.jorgeatgu.com/img/social-sprite.svg
 gems: [jekyll-paginate]
 kramdown:
   input: GFM
@@ -35,4 +35,4 @@ Facebook: https://facebok.com/jorgeatgu
 Vimeo: https://vimeo.com/jorgeatgu
 dribbble: http://www.dribbble.com/jorgeATGU
 
-exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules ]
+exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules, src, css, js, package.json, gulpfile.js ]
