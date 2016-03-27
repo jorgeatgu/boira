@@ -1,34 +1,29 @@
 <header class="header">
-    <nav class="header-nav  post-contenido">
-        <ul class="menu-principal">
-            <li class="menu-principal-li">
-                <a href="{{ site.url | replace:'blog','' }}index">WEB</a>
+    <nav class="header-nav  post-contenido va-m">
+        <ul class="menu-principal va-m">
+            <li class="menu-principal-li va-m">
+                <a class="va-m" href="{{ site.url | replace:'blog','' }}index">WEB</a>
                 </li>
-            <li class="menu-principal-li">
-                <a href="{{ site.url }}">BLOG</a>
+            <li class="menu-principal-li va-m">
+                <a class="va-m" href="{{ site.url }}">BLOG</a>
             </li>
         </ul>
-        <ul class="header-social">
-            <a class="header-social-icons" href="{{ site.twitter }}" title="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
+        <div class="header-social va-m">
+            <a class="header-social-icons" href="{{ site.GitHub }}" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer va-m">
+                    <use xlink:href="{{ site.urliconos }}#github"/>
+                </svg>
+            </a>
+            <a class="header-social-icons twitter" href="{{ site.twitter }}" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer va-m">
                     <use xlink:href="{{ site.urliconos }}#twitter"/>
                 </svg>
             </a>
             <a class="header-social-icons" href="{{ site.CodePen }}" title="Codepen">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer va-m">
                     <use xlink:href="{{ site.urliconos }}#codepen"/>
                 </svg>
             </a>
-            <a class="header-social-icons" href="{{ site.GitHub }}" title="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#github"/>
-                </svg>
-            </a>
-            <a class="header-social-icons" href="{{ site.Behance }}" title="behance">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="iconos-footer">
-                    <use xlink:href="{{ site.urliconos }}#behance"/>
-                </svg>
-            </a>
-        </ul>
+        </div>
     </nav>
 </header>

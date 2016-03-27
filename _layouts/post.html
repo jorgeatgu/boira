@@ -2,30 +2,29 @@
 layout: default
 comments: true
 ---
-		  <a href="https://leanpub.com/scalable/" class="categoria-titulo scalable-leanpub">SCALABLE, un libro sobre SVG</a>
 		  <article class="categoria-titulo">
+	  	    <p class="articulo-fecha">
+	  		    El
+	  		    {{ page.date | date: "%-d" }} de
+	  	        {% assign m = page.date | date: "%-m" %}
+	  	        {% case m %}
+	  	          {% when '1' %}enero
+	  		          {% when '2' %}febrero
+	  		          {% when '3' %}marzo
+	  		          {% when '4' %}abril
+	  		          {% when '5' %}mayo
+	  		          {% when '6' %}junio
+	  		          {% when '7' %}julio
+	  		          {% when '8' %}agosto
+	  		          {% when '9' %}septiembre
+	  		          {% when '10' %}octubre
+	  		          {% when '11' %}noviembre
+	  		          {% when '12' %}diciembre
+	  	        {% endcase %}
+	  	        de
+	  	        {{ page.date | date: "%Y" }}
+	  	    </p>
 		    <h1>{{ page.title }}</h1>
-		    <p class="articulo-fecha">
-			    El
-			    {{ page.date | date: "%-d" }} de
-		        {% assign m = page.date | date: "%-m" %}
-		        {% case m %}
-		          {% when '1' %}enero
-			          {% when '2' %}febrero
-			          {% when '3' %}marzo
-			          {% when '4' %}abril
-			          {% when '5' %}mayo
-			          {% when '6' %}junio
-			          {% when '7' %}julio
-			          {% when '8' %}agosto
-			          {% when '9' %}septiembre
-			          {% when '10' %}octubre
-			          {% when '11' %}noviembre
-			          {% when '12' %}diciembre
-		        {% endcase %}
-		        de
-		        {{ page.date | date: "%Y" }}
-		    </p>
 		    <span class="archivado">Archivado en:
 		    {% for tag in page.tags %}
 		    <a class="archivado-texto" href="/blog/archivo/#{{ tag | slugify }}">{{ tag }}</a>
@@ -43,6 +42,9 @@ comments: true
 		        <a class="compartir-facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Facebook">Facebook</a>
 		        <a class="compartir-google" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Google+">Google+</a>
 		    </article>
+
+			<a href="https://leanpub.com/scalable/" class="categoria-titulo scalable-leanpub">SCALABLE, un libro sobre SVG</a>
+
 		  </article>
 	  		<article class="paginacion post-contenido">
 	              {% if page.next %}
