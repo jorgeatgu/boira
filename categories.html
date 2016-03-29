@@ -1,0 +1,35 @@
+---
+layout: default
+title: Categorias
+---
+{% for category in site.categories %}
+  <li><h2><a class="categoria-titulo-index" class="proxima-nova" name="{{ category | first  }}">{{ category | first | upcase }} </h2> </a>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+      	    <p class="categoria-fecha">
+      		    {{ post.date | date: "%-d" }}
+      	        {% assign m = post.date | date: "%-m" %}
+      	        {% case m %}
+      	          {% when '1' %}enero
+      		          {% when '2' %}febrero
+      		          {% when '3' %}marzo
+      		          {% when '4' %}abril
+      		          {% when '5' %}mayo
+      		          {% when '6' %}junio
+      		          {% when '7' %}julio
+      		          {% when '8' %}agosto
+      		          {% when '9' %}septiembre
+      		          {% when '10' %}octubre
+      		          {% when '11' %}noviembre
+      		          {% when '12' %}diciembre
+      	        {% endcase %}
+      	        {{ post.date | date: "%Y" }}
+      	    </p>
+        <li><a class="categoria-block" href="{{ post.url | prepend:site.baseurl}}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+

@@ -12,7 +12,8 @@ paginate: 5
 paginate_path: "page:num"
 highlighter: pygments
 markdown: kramdown
-urliconos: http://www.jorgeatgu.com/img/social-sprite.svg
+urliconosheader: ../img/social-sprite.svg
+urliconos: /img/social-sprite.svg
 gems: [jekyll-paginate]
 kramdown:
   input: GFM
