@@ -1,0 +1,39 @@
+# Inicio
+name: Scalable
+description: Un blog sobre SVG · CSS3 · HTML5
+themeJekyll: Amanixer
+version: 1.0.0
+timezone: Europe/Madrid
+
+# Configuracion
+url: http://jorgeatgu.com/blog
+baseurl: /blog
+paginate: 5
+paginate_path: "page:num"
+highlighter: pygments
+markdown: kramdown
+urliconosheader: ../img/social-sprite.svg
+urliconos: /img/social-sprite.svg
+gems: [jekyll-paginate]
+kramdown:
+  input: GFM
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Redes Sociales
+author: Jorge Aznar Tobajas
+twittername: jorgeATGU
+twitter: https://twitter.com/jorgeatgu
+CodePen: https://codepen.io/jorgeatgu
+GooglePlus: https://plus.google.com/+JorgeATGU/
+GitHub: https://github.com/jorgeatgu/
+Behance: https://www.behance.net/jorgeatgu
+Facebook: https://facebok.com/jorgeatgu
+Vimeo: https://vimeo.com/jorgeatgu
+dribbble: http://www.dribbble.com/jorgeATGU
+
+exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules, src, package.json, gulpfile.js ]
