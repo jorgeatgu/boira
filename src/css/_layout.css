@@ -8,6 +8,10 @@ body {
     background-color: var(--bgGeneral);
 }
 
+.container-boira {
+    padding: 0 20px;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -42,7 +46,7 @@ ul {
 }
 
 .page-heading {
-    font-size: 2.5em;
+    font-size: 40px;
     color: salmon;
     font-weight: 700;
 }
@@ -55,7 +59,7 @@ ul {
 .categoria-titulo-index {
     text-decoration: none;
     color: #001F3F;
-    line-height: 2em;
+    line-height: 32px;
 }
 
 .categoria-titulo-index {
@@ -68,7 +72,7 @@ ul {
 }
 
 .categoria-titulo-index {
-    line-height: 1.25em;
+    line-height: 34px;
     font-size: 28px;
     width: 100%;
 
@@ -92,12 +96,11 @@ ul {
 
 .post-contenido {
     margin: 0 auto;
-    margin-top: 20px;
     text-align: left;
     font-size: 20px;
     list-style: none;
     line-height: 28px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .paginacion {
@@ -134,4 +137,9 @@ blockquote {
     margin-top: 5px;
     display: block;
     color: var(--impureBlack);
+}
+
+
+#disqus_thread {
+    padding: 0 20px;
 }

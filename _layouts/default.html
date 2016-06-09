@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
+{% include head.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-	<nav class="post-contenido enlaces">
-	  <!-- <a class="btn-index" href="{{ site.baseurl }}/buscador/">Buscador</a> -->
-	  <a class="btn-index" href="{{ site.baseurl }}/archivo/">Categorias</a>
-	  <a class="btn-index" href="http://feedpress.me/scalable">RSS</a>
-	</nav>
-
-    <article >
-        {{ content }}
-    </article>
-
-    {% include footer.html %}
-
-  </body>
+<body>
+    <section class="container-boira">
+        {% include header.html %}
+        <nav class="enlaces">
+            <!-- <a class="btn-index" href="{{ site.baseurl }}/buscador/">Buscador</a> -->
+            <a class="btn-index" href="{{ site.baseurl }}/archivo/">Categorias</a>
+            <a class="btn-index" href="http://feedpress.me/scalable">RSS</a>
+        </nav>
+        <article>
+            {{ content }}
+        </article>
+        {% include footer.html %}
+    </section>
+</body>
 
 </html>
