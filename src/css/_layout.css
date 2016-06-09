@@ -22,25 +22,13 @@ iframe {
     display: block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:--cabeceras {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 700;
     color: #001F3F;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
+:--textos {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -60,6 +48,7 @@ ul {
     text-decoration: none;
     color: #001F3F;
     line-height: 32px;
+    margin: 10px 0;
 }
 
 .categoria-titulo-index {
@@ -75,7 +64,6 @@ ul {
     line-height: 34px;
     font-size: 28px;
     width: 100%;
-
 }
 
 .articulo-fecha {
@@ -137,9 +125,4 @@ blockquote {
     margin-top: 5px;
     display: block;
     color: var(--impureBlack);
-}
-
-
-#disqus_thread {
-    padding: 0 20px;
 }

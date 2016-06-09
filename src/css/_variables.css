@@ -7,3 +7,6 @@
     --clrArchivo: #642626;
     --bgcTwitter: #00ACEE;
 }
+
+@custom-selector :--cabeceras h1, h2, h3, h4, h5, h6;
+@custom-selector :--textos h1, h2, h3, h4, h5, h6, ul, p;

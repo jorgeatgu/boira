@@ -2,7 +2,6 @@
 
 @media only screen and (min-width: 48em) {
     .header-nav {
-        width: 70%;
         padding-top: 15px;
         font-size: 0;
         display: block;
@@ -34,9 +33,7 @@
     iframe {
         max-width: 600px;
     }
-    .comments,
-    .post-contenido,
-    .categoria-titulo {
+    .container-boira {
         width: 80%;
         margin: 0 auto;
     }
@@ -53,9 +50,7 @@
 /* ===== == = === 64em (1024px) === = == ===== */
 
 @media only screen and (min-width: 64em) {
-    .post-contenido,
-    .categoria-titulo,
-    #disqus_thread {
+    .container-boira {
         width: 60%;
         margin: 0 auto;
         max-width: 900px;
@@ -65,9 +60,7 @@
 /* ===== == = === 64em (1367px) === = == ===== */
 
 @media only screen and (min-width: 85.43em) {
-    .post-contenido,
-    .categoria-titulo,
-    #disqus_thread {
+    .container-boira {
         width: 50%;
     }
 }
