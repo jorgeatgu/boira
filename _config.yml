@@ -36,4 +36,4 @@ Facebook: https://facebok.com/jorgeatgu
 Vimeo: https://vimeo.com/jorgeatgu
 dribbble: http://www.dribbble.com/jorgeATGU
 
-exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules, src, package.json, gulpfile.js ]
+exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules, package.json, gulpfile.js ]

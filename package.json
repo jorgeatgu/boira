@@ -10,7 +10,7 @@
   "author": "Jorge Aznar",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.0.1",
@@ -19,7 +19,7 @@
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
+    "gulp-uglify": "^1.5.3",
     "postcss-cssnext": "^2.6.0",
     "postcss-import": "^8.1.2",
     "postcss-inline-comment": "^3.0.0",
