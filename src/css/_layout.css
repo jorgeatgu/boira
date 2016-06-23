@@ -23,12 +23,9 @@ iframe {
 }
 
 :--cabeceras {
-    font-family: "Helvetica Neue", sans-serif;
     font-weight: 700;
     color: #001F3F;
 }
-
-
 
 :--textos {
     text-rendering: optimizeLegibility;
@@ -50,7 +47,6 @@ iframe {
     text-decoration: none;
     color: #001F3F;
     line-height: 32px;
-    margin: 10px 0;
 }
 
 .categoria-titulo-index {
@@ -122,9 +118,8 @@ blockquote {
 }
 
 .post-leer-mas {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    margin-top: 5px;
     display: block;
     color: var(--impureBlack);
 }
