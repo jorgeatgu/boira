@@ -12,7 +12,7 @@ uglify = require('gulp-uglify');
 newer = require('gulp-newer');
 nano = require('gulp-cssnano');
 notify = require("gulp-notify");
-stylelint = require('stylelint');
+// stylelint = require('stylelint');
 
 
 /* Variables */
@@ -70,11 +70,11 @@ gulp.task('compress', function() {
 gulp.task('css', function() {
   var processors = [
     atImport,
-  stylelint(),
-    reporter({
-      clearMessages: true
-    }),
     nested,
+  // stylelint(),
+  // reporter({
+  //   clearMessages: true
+  // }),
     cssnext,
     pxtorem({
       root_value: 16,
