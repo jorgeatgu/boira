@@ -1,4 +1,4 @@
-:root {
+  :root {
     --bgGeneral: #FFFFFD;
     --bgcHeader: #f8f8ff;
     --fontSystem: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
@@ -8,5 +8,9 @@
     --bgcTwitter: #00ACEE;
 }
 
+/* stylelint-disable */
+
 @custom-selector :--cabeceras h1, h2, h3, h4, h5, h6;
 @custom-selector :--textos h1, h2, h3, h4, h5, h6, ul, p;
+
+/* stylelint-enable */
