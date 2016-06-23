@@ -69,11 +69,11 @@ gulp.task('compress', function() {
 
 gulp.task('css', function() {
   var processors = [
-    stylelint(),
+    atImport,
+  stylelint(),
     reporter({
       clearMessages: true
     }),
-    atImport,
     nested,
     cssnext,
     pxtorem({
