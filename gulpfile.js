@@ -69,12 +69,12 @@ gulp.task('compress', function() {
 
 gulp.task('css', function() {
   var processors = [
+    atImport,
+    nested,
     stylelint(),
     reporter({
       clearMessages: true
     }),
-    atImport,
-    nested,
     cssnext,
     pxtorem({
       root_value: 16,
@@ -89,8 +89,7 @@ gulp.task('css', function() {
     autoprefixer
   ];
   return gulp.src('./src/css/styles.css')
-
-  .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .on("error", errorAlertPost)
     .pipe(sourcemaps.write('.'))
