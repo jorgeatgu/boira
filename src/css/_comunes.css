@@ -55,14 +55,15 @@
     text-align: left;
     display: inline-block;
     font-weight: 600;
-    color: #B10DC9;
+    color: #28323e;
     text-decoration: none;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px solid #e2d3d3;
+    border-bottom: 1px solid #e2d3d3;
     span {
         color: var(--impureBlack);
         display: block;
-        &:last-child {
-            font-weight: 800;
-        }
     }
 }
 

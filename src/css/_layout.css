@@ -51,8 +51,10 @@ iframe {
 
 .categoria-titulo {
   h1 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
 
@@ -66,8 +68,10 @@ iframe {
 }
 
 .categoria-titulo-index {
-    line-height: 30px;
-    font-size: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     width: 100%;
 }
 
@@ -128,4 +132,10 @@ blockquote {
     font-weight: 600;
     display: block;
     color: var(--impureBlack);
+}
+
+
+//Hack animal
+.articulo-fecha + h1 {
+  font-size: 0;
 }

@@ -93,9 +93,7 @@ gulp.task('css', function() {
   .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .on("error", errorAlertPost)
-    .pipe(sourcemaps.write('./css', {
-      sourceRoot: '/src'
-    }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'))
     .pipe(notify({
       message: 'postCSS complete'
