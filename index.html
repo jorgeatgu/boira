@@ -6,6 +6,10 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
   <section class="post-contenido">
 
   {% for post in paginator.posts %}
+    <a class="post-contenido-enlace"  href="{{ post.url | prepend: site.baseurl }}">
+    <h1 class="categoria-titulo-index">
+      {{ post.title }}
+    </h1>
     <span class="articulo-fecha">
     El
     {{ post.date | date: "%-d" }} de
@@ -27,16 +31,10 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
     de
     {{ post.date | date: "%Y" }}
     </span>
-    <h1>
-      <a class="categoria-titulo-index" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h1>
   <article class="border-excerpt">{{ post.excerpt | truncatewords: 70 }}
-
-    {% if post.excerpt != post.content %}
-            <a class="post-leer-mas" href="{{ site.baseurl }}{{ post.url }}">Leer más</a>
-        {% endif %}
   </article>
 
+  </a>
 
 
     {% endfor %}

@@ -99,6 +99,14 @@ iframe {
     line-height: 26px;
 }
 
+.post-contenido-enlace {
+  text-decoration: none;
+  color: var(--impureBlack);
+  &:visited {
+    color: var(--impureBlack);
+  }
+}
+
 .paginacion {
     font-size: 0;
     text-align: center;
