@@ -80,7 +80,6 @@
 
 .compartir {
     margin: 10px 0;
-    background-color: var(--bg);
     .compartir-twitter,
     .compartir-facebook,
     .compartir-google {
