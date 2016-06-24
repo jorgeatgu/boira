@@ -445,7 +445,7 @@ textarea {
     font-size: 0;
 
     width: 100%;
-    margin: 0;
+    margin: 1.25rem 0;
     padding: 0;
 }
 
@@ -455,12 +455,12 @@ textarea {
   cursor: pointer;
 }
 
-.menu-principal-li:first-child {
-  padding-right: 10px;
+.menu-principal-li {
+    padding-right: 10px;
 }
 
 .menu-principal-li a {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   list-style: none;
   text-decoration: none;
@@ -964,17 +964,6 @@ pre code {
     background-color: transparent;
 }
 
-.btn-index {
-    font-size: 1rem;
-    font-weight: 600;
-
-    margin-right: 15px;
-
-    text-decoration: none;
-
-    color: #121;
-}
-
 .post-autores-tag {
     font-size: 0.88rem;
 
@@ -1112,7 +1101,6 @@ pre code {
     }
     .menu-principal {
         width: 50%;
-        margin: 0;
         padding: 0;
     }
     .menu-principal-li a {
@@ -1122,12 +1110,6 @@ pre code {
 
         border-bottom: 0;
     }
-    .menu-principal-li a:hover {
-    -webkit-transition: border-bottom .5s ease-in-out;
-    transition: border-bottom .5s ease-in-out;
-    color: crimson;
-    border-bottom: 3px solid #121;
-  }
     .social-header.post-contenido {
         display: inline-block;
 

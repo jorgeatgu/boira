@@ -6,14 +6,6 @@
     color: var(--impureBlack);
 }
 
-.btn-index {
-    font-size: 16px;
-    font-weight: 600;
-    margin-right: 15px;
-    text-decoration: none;
-    color: var(--impureBlack);
-}
-
 .post-autores-tag {
     font-size: 14px;
     background-color: #E5EDB7;
