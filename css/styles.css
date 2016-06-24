@@ -692,7 +692,9 @@ blockquote {
 	margin-top: 20px;
 	padding: 1.25rem 0;
 
-	text-align: center;
+	text-align: left;
+
+  color: #121;
 }
 
 .panel-poison h3 {
@@ -1181,7 +1183,7 @@ pre code {
         padding: 0;
     }
     .panel-poison.post-contenido {
-        margin: 1.88rem;
+        margin: 1.88rem 0;
     }
 }
 
