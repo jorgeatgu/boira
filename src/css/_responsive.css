@@ -6,14 +6,10 @@
         font-size: 0;
         display: block;
     }
-    .menu-principal,
-    .header-social {
+    .menu-principal {
         padding: 0;
         margin: 0;
         width: 50%;
-    }
-    .header-social {
-        text-align: right;
     }
     .menu-principal-li a {
         padding: 0;

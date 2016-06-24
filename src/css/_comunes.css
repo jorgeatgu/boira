@@ -30,16 +30,12 @@
     text-align: center;
     padding: 16px;
     border: 1px solid #a9a9a9;
-    color: #dc143c;
+    color: var(--impureBlack);
     font-weight: 600;
     background-color: #f8f8ff;
-    transition: background-color .3s;
     display: inline-block;
     width: auto;
     max-width: 250px;
-    &:hover {
-        background-color: #66CDAA;
-    }
 }
 
 .btn-posterior {
@@ -69,7 +65,7 @@
 
 .border-excerpt {
     margin-bottom: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 35px;
     border-bottom: 1px solid #e2d3d3;
     p {
         margin: 0;

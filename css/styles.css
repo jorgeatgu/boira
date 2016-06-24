@@ -468,40 +468,6 @@ textarea {
   color: #121;
 }
 
-.header-social {
-    font-size: 0;
-
-    width: 100%;
-    margin-top: 10px;
-    padding: 0;
-}
-
-.header-social .header-social-icons {
-  display: inline-block;
-  margin: 0;
-  padding: 0.31rem 0.63rem;
-  list-style: none;
-  text-decoration: none;
-}
-
-.header-social-icons:first-child,
-    .header-social-icons:last-child {
-  background-color: #121;
-}
-
-.header-social-icons:nth-child(2) {
-  background-color: #00ACEE;
-}
-
-.header-social-icons:last-child {
-  margin-right: 0;
-}
-
-.header-social-icons .iconos-footer {
-  width: 32px;
-  height: 32px;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -1033,18 +999,12 @@ pre code {
     max-width: 250px;
     padding: 1rem;
 
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
     text-align: center;
     text-decoration: none;
 
-    color: #dc143c;
+    color: #121;
     border: 1px solid #a9a9a9;
     background-color: #f8f8ff;
-}
-
-.btn:hover {
-  background-color: #66CDAA;
 }
 
 .btn-posterior {
@@ -1079,7 +1039,7 @@ pre code {
 
 .border-excerpt {
     margin-bottom: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 35px;
 
     border-bottom: 1px solid #e2d3d3;
 }
@@ -1150,14 +1110,10 @@ pre code {
 
         padding-top: 15px;
     }
-    .menu-principal,
-    .header-social {
+    .menu-principal {
         width: 50%;
         margin: 0;
         padding: 0;
-    }
-    .header-social {
-        text-align: right;
     }
     .menu-principal-li a {
         display: inline-block;
