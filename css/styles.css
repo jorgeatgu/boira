@@ -689,16 +689,24 @@ blockquote {
 }
 
 .panel-poison {
+  font-size: 0;
+
 	margin-top: 20px;
 	padding: 1.25rem 0;
 
 	text-align: left;
-
-  color: #121;
 }
 
-.panel-poison h3 {
+.panel-poison .panel-poison-left,
+  .panel-poison .panel-poison-right {
   font-size: 0.88rem;
+  display: inline-block;
+  width: 50%;
+}
+
+.panel-poison .panel-poison-right {
+  float: right;
+  text-align: right;
 }
 
 .panel-poison svg {
@@ -708,6 +716,7 @@ blockquote {
 
 .panel-poison .footer-l {
   text-decoration: none;
+  color: #121;
 }
 
 pre,
