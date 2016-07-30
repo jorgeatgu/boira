@@ -132,7 +132,6 @@ gulp.task('images', function() {
 /* Tarea por defecto para compilar CSS y comprimir imagenes */
 gulp.task('default', function() {
   gulp.watch('./src/css/*.css', ['css']);
-  gulp.watch('./src/img/**', ['images']);
 });
 
 /* Tarea final para comprimir CSS y JavaScript */
