@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 body {
@@ -46,13 +47,11 @@ iframe {
 .categoria-titulo-index {
     text-decoration: none;
     color: #001F3F;
-    line-height: 32px;
 }
 
 .categoria-titulo {
   h1 {
     font-size: 18px;
-    line-height: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -68,7 +67,6 @@ iframe {
 }
 
 .categoria-titulo-index {
-    line-height: 24px;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -96,7 +94,6 @@ iframe {
     text-align: left;
     font-size: 20px;
     list-style: none;
-    line-height: 26px;
 }
 
 .post-contenido-enlace {
