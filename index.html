@@ -6,7 +6,7 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
   <section class="post-contenido">
 
   {% for post in paginator.posts %}
-    <a class="post-contenido-enlace"  href="{{ post.url | prepend: site.baseurl }}">
+    <a class="post-contenido-enlace" href="{{ post.url | prepend: site.baseurl }}">
     <h1 class="categoria-titulo-index">
       {{ post.title }}
     </h1>
