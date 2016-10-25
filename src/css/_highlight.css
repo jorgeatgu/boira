@@ -232,3 +232,12 @@ pre {
 .nv {
     color: #008080;
 }
+
+
+p code {
+  font-size: 1.25rem;
+  background: #AACCFF;
+  padding: 5px;
+  color: #222233;
+  font-weight: bold;
+}
