@@ -37,6 +37,9 @@
         "declaration-bang-space-before": ["always", {
             message: ["Que menos que dar un poco de separación a ese !important del averno"]
         }],
+        "declaration-block-no-duplicate-properties": [true, {
+          message: ["Propiedades repetidas. Seguro que has copiado y pegado de algún sitio."]
+        }],
         "declaration-block-no-ignored-properties": true,
         "declaration-block-no-shorthand-property-overrides": [true, {
             message: ["El shorthand en primer lugar. Ejemplo .foo { margin: 10px; margin-right: 5px; }"]
@@ -83,13 +86,13 @@
         "media-query-list-comma-newline-after": "always-multi-line",
         "media-query-list-comma-space-after": "always-single-line",
         "media-query-list-comma-space-before": "never",
-        "media-query-parentheses-space-inside": "never",
         "no-eol-whitespace": [true, {
             message: ["A borrar los espacios"]
         }],
         "no-extra-semicolons": [true, {
             message: ["Te sobra un ;"]
         }],
+        "no-duplicate-selectors": true,
         "number-leading-zero": ["never", {
             message: ["Escribiendo ceros de más"]
         }],
