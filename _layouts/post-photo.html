@@ -1,0 +1,75 @@
+---
+layout: default
+comments: true
+---
+    <main>
+      <div class="categoria-titulo">
+  	    <h1>{{ page.title }}</h1>
+          <p class="articulo-fecha">
+            El
+            {{ page.date | date: "%-d" }} de
+              {% assign m = page.date | date: "%-m" %}
+              {% case m %}
+                {% when '1' %}enero
+                  {% when '2' %}febrero
+                  {% when '3' %}marzo
+                  {% when '4' %}abril
+                  {% when '5' %}mayo
+                  {% when '6' %}junio
+                  {% when '7' %}julio
+                  {% when '8' %}agosto
+                  {% when '9' %}septiembre
+                  {% when '10' %}octubre
+                  {% when '11' %}noviembre
+                  {% when '12' %}diciembre
+              {% endcase %}
+              de
+              {{ page.date | date: "%Y" }}
+          </p>
+  	    <span class="archivado">Archivado en:
+  	    {% for tag in page.tags %}
+  	    <a class="archivado-texto" href="/blog/archivo/#{{ tag | slugify }}">{{ tag }}</a>
+          {% endfor %}
+          </span>
+  	    <!-- Categorías: {{ page.categories | join: ', '| upcase }} -->
+
+      </div>
+
+      <div class="post-contenido">
+  	    {{ content }}
+
+  	    <div class="compartir">
+  	        <a class="compartir-twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twittername }}&related={{ site.twittername }}" rel="nofollow" target="_blank" title="Comparte en Twitter">Twitter</a>
+  	        <a class="compartir-facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Facebook">Facebook</a>
+  	        <a class="compartir-google" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Google+">Google+</a>
+  	    </div>
+        <a href="https://leanpub.com/scalable/" class="scalable-leanpub">SCALABLE, un libro sobre SVG<span>A lo largo de 15 capítulos, 120 páginas y más de 70 ejemplos vamos a ver todo lo que podemos hacer con SVG.</span>
+        <span>Tu pones el precio, disponible desde 0$ para descargar desde LeanPub(PDF, ePUB y MOBI).</span>
+        </a>
+      </div>
+    </main>
+
+    <div class="paginacion post-contenido">
+          {% if page.next %}
+            <a class="btn-posterior" href="{{ site.baseurl}}{{ page.next.url }}">Artículo posterior</a>
+          {% endif %}
+          {% if page.previous %}
+            <a class="btn-anterior" href="{{ site.baseurl}}{{ page.previous.url }}">Artículo anterior</a>
+          {% endif %}
+    </div>
+
+    {% if page.comments %}
+    <div id="disqus_thread"></div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jorgeatgu'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+           dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       })();
+   </script>
+  {% endif %}
