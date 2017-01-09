@@ -54,6 +54,11 @@
         margin-right: 5%;
     }
 
+    .btn-posterior,
+    .btn-anterior {
+      display: inline-block;
+    }
+
 }
 
 /* ===== == = === 64em (1024px) === = == ===== */

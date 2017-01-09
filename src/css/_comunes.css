@@ -28,6 +28,16 @@
     display: inline-block;
     width: auto;
     max-width: 250px;
+    &:hover {
+      background-color: var(--impureBlack);
+      color: #f8f8ff;
+    }
+}
+
+.btn-anterior,
+.btn-posterior {
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-posterior {

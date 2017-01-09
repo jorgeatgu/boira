@@ -16,10 +16,6 @@
   width: 100%;
 }
 
-.panel-poison-right {
-  float: right;
-}
-
 .footer-l {
   text-decoration: none;
   color: var(--impureBlack);
