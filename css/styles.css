@@ -1007,11 +1007,7 @@ p code {
 }
 
 .btn-posterior {
-    margin-left: 5%;
-}
-
-.btn-anterior {
-    margin-right: 5%;
+  margin-top: 15px;
 }
 
 .scalable-leanpub {
@@ -1148,6 +1144,12 @@ p code {
     }
     .panel-poison-right {
       text-align: right;
+    }
+    .btn-posterior {
+        margin-left: 5%;
+    }
+    .btn-anterior {
+        margin-right: 5%;
     }
 
 }

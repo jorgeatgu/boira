@@ -46,6 +46,14 @@
       text-align: right;
     }
 
+    .btn-posterior {
+        margin-left: 5%;
+    }
+
+    .btn-anterior {
+        margin-right: 5%;
+    }
+
 }
 
 /* ===== == = === 64em (1024px) === = == ===== */
