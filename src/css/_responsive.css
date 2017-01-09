@@ -36,6 +36,16 @@
     .panel-poison.post-contenido {
         margin: 30px 0;
     }
+
+    .panel-poison-left,
+    .panel-poison-right {
+      width: 50%;
+    }
+
+    .panel-poison-right {
+      text-align: right;
+    }
+
 }
 
 /* ===== == = === 64em (1024px) === = == ===== */

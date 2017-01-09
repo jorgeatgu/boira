@@ -3,22 +3,24 @@
 	text-align: left;
 	padding: 20px 0;
   font-size: 0;
-  .panel-poison-left,
-  .panel-poison-right {
-    font-size: 14px;
-    display: inline-block;
-    width: 50%;
-  }
-  .panel-poison-right {
-    text-align: right;
-    float: right;
-  }
   svg {
     width: 20px;
     height: 20px;
   }
-  .footer-l {
-    text-decoration: none;
-    color: var(--impureBlack);
-	}
+}
+
+.panel-poison-left,
+.panel-poison-right {
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+
+.panel-poison-right {
+  float: right;
+}
+
+.footer-l {
+  text-decoration: none;
+  color: var(--impureBlack);
 }
