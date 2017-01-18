@@ -6,26 +6,28 @@ comments: true
       <div class="categoria-titulo">
   	    <h1>{{ page.title }}</h1>
           <p class="articulo-fecha">
-            El
-            {{ page.date | date: "%-d" }} de
-              {% assign m = page.date | date: "%-m" %}
-              {% case m %}
-                {% when '1' %}enero
-                  {% when '2' %}febrero
-                  {% when '3' %}marzo
-                  {% when '4' %}abril
-                  {% when '5' %}mayo
-                  {% when '6' %}junio
-                  {% when '7' %}julio
-                  {% when '8' %}agosto
-                  {% when '9' %}septiembre
-                  {% when '10' %}octubre
-                  {% when '11' %}noviembre
-                  {% when '12' %}diciembre
-              {% endcase %}
-              de
-              {{ page.date | date: "%Y" }}
-          </p>
+          <time datetime="{{page.date}}">
+              El
+              {{ page.date | date: "%-d" }} de
+                {% assign m = page.date | date: "%-m" %}
+                {% case m %}
+                  {% when '1' %}enero
+                    {% when '2' %}febrero
+                    {% when '3' %}marzo
+                    {% when '4' %}abril
+                    {% when '5' %}mayo
+                    {% when '6' %}junio
+                    {% when '7' %}julio
+                    {% when '8' %}agosto
+                    {% when '9' %}septiembre
+                    {% when '10' %}octubre
+                    {% when '11' %}noviembre
+                    {% when '12' %}diciembre
+                {% endcase %}
+                de
+                {{ page.date | date: "%Y" }}
+            </time>
+            </div></p>
   	    <span class="archivado">Archivado en:
   	    {% for tag in page.tags %}
   	    <a class="archivado-texto" href="/blog/archivo/#{{ tag | slugify }}">{{ tag }}</a>
