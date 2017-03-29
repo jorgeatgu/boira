@@ -53,8 +53,6 @@ iframe {
 .categoria-titulo {
   h1 {
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
   }
 }
 
@@ -69,8 +67,6 @@ iframe {
 
 .categoria-titulo-index {
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     width: 100%;
 }
 
@@ -133,6 +129,7 @@ blockquote {
 
 .archivado {
     font-size: 14px;
+    margin-bottom: 10px;
     .archivado-texto {
         color: var(--clrArchivo);
         font-weight: 600;
