@@ -130,6 +130,7 @@ blockquote {
 .archivado {
     font-size: 14px;
     margin-bottom: 10px;
+    display: inline-block;
     .archivado-texto {
         color: var(--clrArchivo);
         font-weight: 600;
