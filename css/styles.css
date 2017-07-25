@@ -1157,7 +1157,8 @@ p code {
     .panel-poison.post-contenido {
         margin: 1.88rem 0;
     }
-    .categoria-titulo h1 {
+    .categoria-titulo h1,
+    .categoria-titulo-index {
         font-size: 1.88rem;
     }
     .panel-poison-left,

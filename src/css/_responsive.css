@@ -37,7 +37,8 @@
         margin: 30px 0;
     }
 
-    .categoria-titulo h1 {
+    .categoria-titulo h1,
+    .categoria-titulo-index {
         font-size: 30px;
     }
 
