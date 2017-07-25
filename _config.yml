@@ -14,7 +14,7 @@ highlighter: pygments
 markdown: kramdown
 urliconosheader: ../img/social-sprite.svg
 urliconos: /img/social-sprite.svg
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 kramdown:
   input: GFM
   auto_ids:       true

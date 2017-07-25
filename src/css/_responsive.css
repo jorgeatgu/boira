@@ -37,6 +37,10 @@
         margin: 30px 0;
     }
 
+    .categoria-titulo h1 {
+        font-size: 30px;
+    }
+
     .panel-poison-left,
     .panel-poison-right {
       width: 50%;

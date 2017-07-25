@@ -3,7 +3,7 @@ layout: default
 comments: true
 ---
     <main>
-      <div class="categoria-titulo">
+      <article class="categoria-titulo">
   	    <h1>{{ page.title }}</h1>
           <p class="articulo-fecha">
           <time datetime="{{page.date}}">
@@ -27,7 +27,7 @@ comments: true
                 de
                 {{ page.date | date: "%Y" }}
             </time>
-            </div></p>
+        </p>
   	    <span class="archivado">Archivado en:
   	    {% for tag in page.tags %}
   	    <a class="archivado-texto" href="/blog/archivo/#{{ tag | slugify }}">{{ tag }}</a>
@@ -35,33 +35,28 @@ comments: true
           </span>
   	    <!-- Categorías: {{ page.categories | join: ', '| upcase }} -->
 
-      </div>
+      </article>
 
-      <div class="post-contenido">
+      <article class="post-contenido">
   	    {{ content }}
 
-  	    <div class="compartir">
-  	        <a class="compartir-twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twittername }}&related={{ site.twittername }}" rel="nofollow" target="_blank" title="Comparte en Twitter">Twitter</a>
-  	        <a class="compartir-facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Facebook">Facebook</a>
-  	        <a class="compartir-google" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Comparte en Google+">Google+</a>
-  	    </div>
         <a href="https://leanpub.com/scalable/" class="scalable-leanpub">SCALABLE, un libro sobre SVG<span>A lo largo de 15 capítulos, 120 páginas y más de 70 ejemplos vamos a ver todo lo que podemos hacer con SVG.</span>
         <span>Tu pones el precio, disponible desde 0$ para descargar desde LeanPub(PDF, ePUB y MOBI).</span>
         </a>
-      </div>
+      </article>
     </main>
 
-    <div class="paginacion post-contenido">
+    <article class="paginacion post-contenido">
           {% if page.next %}
             <a class="btn-posterior" href="{{ site.baseurl}}{{ page.next.url }}">Artículo posterior</a>
           {% endif %}
           {% if page.previous %}
             <a class="btn-anterior" href="{{ site.baseurl}}{{ page.previous.url }}">Artículo anterior</a>
           {% endif %}
-    </div>
+    </article>
 
     {% if page.comments %}
-    <div id="disqus_thread"></div>
+    <article id="disqus_thread"></article>
 
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
