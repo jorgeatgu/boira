@@ -1031,7 +1031,6 @@ p code {
 
 .scalable-leanpub {
     font-size: 1rem;
-    font-weight: 600;
 
     display: inline-block;
 
@@ -1047,6 +1046,7 @@ p code {
 }
 
 .scalable-leanpub span {
+  font-weight: 600;
   display: block;
   color: #121;
 }
