@@ -19,7 +19,6 @@ browserSync = require('browser-sync');
 inlinesource = require('gulp-inline-source');
 uncss = require('gulp-uncss');
 webp = require('gulp-webp');
-responsive = require('gulp-responsive');
 
 gulp.task("browserSync", function() {
     browserSync({
@@ -178,38 +177,6 @@ gulp.task('webp', () =>
         .pipe(gulp.dest('img'))
 );
 
-gulp.task('imgrwd', function () {
-  return gulp.src('src/img/*.{png,jpg}')
-    .pipe(responsive({
-      '*.png': [{
-        width: 300,
-        rename: {
-          suffix: '-300px',
-          extname: '.jpg',
-        },
-        format: 'jpeg',
-      }, {
-        width: 600,
-        rename: {
-          suffix: '-600px',
-          extname: '.jpg',
-        },
-      }, {
-        width: 1200,
-        rename: {
-          suffix: '-1200px',
-          extname: '.jpg',
-        }
-      }],
-    }, {
-      quality: 75,
-      progressive: true,
-      withMetadata: false,
-      errorOnEnlargement: false,
-    }))
-    .pipe(gulp.dest('img'));
-});
-
 /* Tarea por defecto para compilar CSS y comprimir imagenes */
 gulp.task('default', ["browserSync"], function() {
     //Add interval to watcher!
@@ -227,4 +194,4 @@ gulp.task('default', ["browserSync"], function() {
 gulp.task('build', ['minify', 'compress', 'removecss', 'inline']);
 
 //Build para un proyecto con imágenes
-gulp.task('buildimg', ['minify', 'compress', 'removecss', 'inline' , 'imgrwd' , 'webp']);
+gulp.task('buildimg', ['minify', 'compress', 'removecss', 'inline' , 'webp']);
