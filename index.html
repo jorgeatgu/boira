@@ -6,11 +6,12 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
   <section class="post-contenido">
 
   {% for post in paginator.posts %}
+    <article class="post-contenido-container">
     <a class="post-contenido-enlace" href="{{ post.url | prepend: site.baseurl }}">
     <h1 class="categoria-titulo-index">
       {{ post.title }}
     </h1>
-    <span class="articulo-fecha">
+    <time datetime="{{page.date}}" class="articulo-fecha">
     El
     {{ post.date | date: "%-d" }} de
     {% assign m = post.date | date: "%-m" %}
@@ -30,11 +31,11 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
     {% endcase %}
     de
     {{ post.date | date: "%Y" }}
-    </span>
-  <article class="border-excerpt">{{ post.excerpt | truncatewords: 70 }}
-  </article>
+    </time>
+  <p class="border-excerpt">{{ post.excerpt | truncatewords: 70 | remove: '<p>' | remove: '</p>'}}</p>
 
   </a>
+  </article>
 
 
     {% endfor %}
@@ -42,7 +43,7 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
   </section>
 
 <!-- Pagination links -->
-<article class="paginacion post-contenido">
+<section class="paginacion post-contenido">
   {% if paginator.previous_page %}
    <a class="btn btn-anterior" href="{{ site.baseurl}}/page{{ paginator.previous_page }}/">Página anterior</a>
   {% else %}
@@ -53,4 +54,4 @@ title: SCALABLE un blog sobre SVG · CSS3 · HTML5 · JS
   {% else %}
 
   {% endif %}
-</article>
+</section>

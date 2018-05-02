@@ -2,7 +2,7 @@
 name: Scalable
 description: Un blog sobre SVG · CSS3 · HTML5
 themeJekyll: Boira
-version: 2.0.0
+version: 3.0.0
 timezone: Europe/Madrid
 
 # Configuracion
@@ -35,5 +35,6 @@ Behance: https://www.behance.net/jorgeatgu
 Facebook: https://facebok.com/jorgeatgu
 Vimeo: https://vimeo.com/jorgeatgu
 dribbble: http://www.dribbble.com/jorgeATGU
+carto: https://jorgeatgu.carto.com
 
 exclude: [ config.codekit, .gitignore, .sass-cache, .tweet-cache, node_modules, package.json, gulpfile.js, _drafts ]

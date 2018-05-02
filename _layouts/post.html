@@ -46,17 +46,17 @@ comments: true
       </article>
     </main>
 
-    <article class="paginacion post-contenido">
+    <section class="paginacion post-contenido">
           {% if page.next %}
             <a class="btn-posterior" href="{{ site.baseurl}}{{ page.next.url }}">Artículo posterior</a>
           {% endif %}
           {% if page.previous %}
             <a class="btn-anterior" href="{{ site.baseurl}}{{ page.previous.url }}">Artículo anterior</a>
           {% endif %}
-    </article>
+    </section>
 
     {% if page.comments %}
-    <article id="disqus_thread"></article>
+    <section id="disqus_thread"></section>
 
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
