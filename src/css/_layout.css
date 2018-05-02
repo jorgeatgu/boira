@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: var(--fontSystem);
+    font-family: var(--fontText);
     color: var(--impureBlack);
     background-color: var(--bgGeneral);
 }
@@ -34,6 +34,12 @@ iframe {
     -webkit-font-smoothing: antialiased;
 }
 
+.post-contenido-container {
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
 .page-heading {
     font-size: 40px;
     color: salmon;
@@ -51,14 +57,16 @@ iframe {
 }
 
 .categoria-titulo {
-  h1 {
-    font-size: 18px;
-  }
+    h1 {
+        font-size: 18px;
+    }
 }
 
 .categoria-titulo-index {
+    font-family: var(--fontTitle);
+    font-size: 1.5rem;
+    text-transform: uppercase;
     padding: 0;
-    font-size: 18px;
     width: 100%;
 }
 
@@ -93,19 +101,25 @@ iframe {
     list-style: none;
     color: var(--impureBlack);
     strong {
-      font-family: var(--fontSystem);
+        font-family: var(--fontSystem);
     }
     p {
-      margin-top: 0;
+        margin-top: 0;
     }
 }
 
 .post-contenido-enlace {
-  text-decoration: none;
-  color: var(--impureBlack);
-  &:visited {
+    text-decoration: none;
     color: var(--impureBlack);
-  }
+    font-size: 1rem;
+    &:visited {
+        color: var(--impureBlack);
+    }
+}
+
+.post-contenido-texto {
+    font-size: 1rem;
+    max-width: 35rem;
 }
 
 .paginacion {
@@ -143,9 +157,4 @@ blockquote {
     font-weight: 600;
     display: block;
     color: var(--impureBlack);
-}
-
-/* Hack animal */
-.articulo-fecha + h1 {
-  font-size: 0;
 }

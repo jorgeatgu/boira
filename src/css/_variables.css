@@ -1,17 +1,27 @@
-  :root {
-    --fontTitle: 'Poppins', sans-serif;
-    --fontText: 'Adamina', serif;
-    --bgGeneral: #FFFFFD;
-    --bgcHeader: #f8f8ff;
-    --clrAutores: #85144B;
-    --impureBlack: #121;
-    --clrArchivo: #642626;
-    --bgcTwitter: #00ACEE;
-}
+   :root {
+      --fontTitle: 'Rubik', sans-serif;
+      --fontText: 'Adamina', serif;
+      --bgGeneral: #FFFFFD;
+      --bgcHeader: #f8f8ff;
+      --clrAutores: #85144B;
+      --impureBlack: #121;
+      --clrArchivo: #642626;
+      --bgcTwitter: #00ACEE;
+  }
+  /* stylelint-disable */
 
-/* stylelint-disable */
-
-@custom-selector :--cabeceras h1, h2, h3, h4, h5, h6;
-@custom-selector :--textos h1, h2, h3, h4, h5, h6, ul, p;
-
-/* stylelint-enable */
+  @custom-selector :--cabeceras h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6;
+  @custom-selector :--textos h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  p;
+  /* stylelint-enable */
