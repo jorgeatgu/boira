@@ -1,31 +1,12 @@
-/* ===== == = === desde 48em (768px) === = == ===== */
-
 @media only screen and (min-width: 48em) {
-    .header-nav {
-        padding-top: 15px;
-        font-size: 0;
-        display: block;
-    }
-    .menu-principal {
-        padding: 0;
-        width: 50%;
-    }
-    .menu-principal-li a {
-        padding: 0;
-        display: inline-block;
-        border-bottom: 0;
-    }
-    .social-header.post-contenido {
-        width: 49%;
-        display: inline-block;
-        text-align: right;
-    }
+
     iframe {
         max-width: 600px;
     }
+
     .container-boira {
-        width: 80%;
-        margin: 0 auto;
+        width: 40rem;
+        margin-left: 10vw;
     }
 
     .header,
@@ -33,6 +14,7 @@
     .categorita-titulo {
         padding: 0;
     }
+
     .panel-poison.post-contenido {
         margin: 30px 0;
     }
@@ -62,26 +44,5 @@
     .btn-posterior,
     .btn-anterior {
       display: inline-block;
-    }
-
-}
-
-/* ===== == = === 64em (1024px) === = == ===== */
-@media only screen and (min-width: 64em) {
-    .container-boira {
-        width: 60%;
-        margin: 0 auto;
-        max-width: 900px;
-    }
-    .enlaces {
-      margin-bottom: 20px;
-    }
-
-}
-/* ===== == = === 64em (1367px) === = == ===== */
-
-@media only screen and (min-width: 85.43em) {
-    .container-boira {
-        width: 50%;
     }
 }

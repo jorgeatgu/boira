@@ -6,28 +6,18 @@
     color: var(--impureBlack);
 }
 
-.post-autores-tag {
-    font-size: 14px;
-    background-color: #E5EDB7;
-    color: #642626;
-    text-decoration: none;
-    padding: 0 5px;
-    margin: 0 5px 10px 0;
-    display: inline-block;
-}
-
 .btn {
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: none;
     text-align: center;
-    padding: 16px;
+    padding: 1rem;
     border: 1px solid #a9a9a9;
     color: var(--impureBlack);
     font-weight: 600;
     background-color: #f8f8ff;
     display: inline-block;
     width: auto;
-    max-width: 250px;
+    max-width: 15rem;
     &:hover {
         background-color: var(--impureBlack);
         color: #f8f8ff;
@@ -41,17 +31,17 @@
 }
 
 .btn-posterior {
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 
 .scalable-leanpub {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: left;
     display: inline-block;
     color: #28323e;
     text-decoration: none;
-    padding: 10px 0;
-    margin: 10px 0;
+    padding: 1rem 0;
+    margin: 1rem 0;
     border-top: 1px solid #e2d3d3;
     border-bottom: 1px solid #e2d3d3;
     span {
@@ -67,31 +57,5 @@
     border-bottom: 1px solid #e2d3d3;
     p {
         margin: 0;
-    }
-}
-
-.va-m {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.compartir {
-    margin: 10px 0;
-    .compartir-twitter,
-    .compartir-facebook,
-    .compartir-google {
-        text-decoration: none;
-        color: #fff;
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-    .compartir-twitter {
-        background-color: #55ACEE;
-    }
-    .compartir-facebook {
-        background-color: #3B5998;
-    }
-    .compartir-google {
-        background-color: #DC4E41;
     }
 }

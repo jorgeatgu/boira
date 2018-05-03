@@ -1,17 +1,13 @@
 .panel-poison {
-    margin-top: 20px;
+    margin-top: 2rem;
     text-align: left;
-    padding: 20px 0;
+    padding: 2rem 0;
     font-size: 0;
-    svg {
-        width: 20px;
-        height: 20px;
-    }
 }
 
 .panel-poison-left,
 .panel-poison-right {
-    font-size: 14px;
+    font-size: 1rem;
     display: inline-block;
     width: 100%;
 }

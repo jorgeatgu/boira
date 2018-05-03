@@ -10,7 +10,7 @@ body {
 }
 
 .container-boira {
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
 img {
@@ -26,7 +26,7 @@ iframe {
 :--cabeceras {
     font-weight: 700;
     color: #001F3F;
-    font-family: var(--fontSystem);
+    font-family: var(--fontTitle);
 }
 
 :--textos {
@@ -36,7 +36,9 @@ iframe {
 
 .post-contenido-container {
     &:not(:last-child) {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
     }
 }
 
@@ -54,12 +56,6 @@ iframe {
 .categoria-titulo-index {
     text-decoration: none;
     color: #001F3F;
-}
-
-.categoria-titulo {
-    h1 {
-        font-size: 18px;
-    }
 }
 
 .categoria-titulo-index {
@@ -111,7 +107,7 @@ iframe {
 .post-contenido-enlace {
     text-decoration: none;
     color: var(--impureBlack);
-    font-size: 1rem;
+    font-size: .88rem;
     &:visited {
         color: var(--impureBlack);
     }
@@ -146,10 +142,6 @@ blockquote {
         color: var(--clrArchivo);
         font-weight: 600;
     }
-}
-
-.post-contenido.enlaces {
-    margin: 20px auto;
 }
 
 .post-leer-mas {

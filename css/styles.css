@@ -272,7 +272,7 @@ template {
 :root {
       --fontTitle: 'Rubik', sans-serif;
       --fontText: 'Adamina', serif;
-      --bgGeneral: #FFFFFD;
+      --bgGeneral: #FEFCF7;
       --bgcHeader: #f8f8ff;
       --clrAutores: #85144B;
       --impureBlack: #121;
@@ -281,40 +281,6 @@ template {
   }
 /* stylelint-disable */
 /* stylelint-enable */
-.header {
-    width: 100%;
-}
-.header-nav {
-    width: 100%;
-    display: block;
-    font-size: 0;
-}
-.menu-principal {
-    width: 100%;
-    padding: 0;
-    font-size: 0;
-    margin: 1.25rem 0;
-}
-.menu-principal .menu-principal-li {
-        width: auto;
-        display: inline-block;
-        cursor: pointer;
-    }
-.menu-principal-li {
-    padding-right: 10px;
-}
-.menu-principal-li a {
-        list-style: none;
-        text-decoration: none;
-        font-size: 1.25rem;
-        font-family: var(--fontSystem);
-        font-family: var(--fontSystem);
-        letter-spacing: 0.06rem;
-        font-weight: 600;
-        color: #121;
-        color: var(--impureBlack);
-        text-transform: uppercase;
-    }
 * {
     box-sizing: border-box;
     line-height: 1.5;
@@ -324,11 +290,11 @@ body {
     font-family: var(--fontText);
     color: #121;
     color: var(--impureBlack);
-    background-color: #FFFFFD;
+    background-color: #FEFCF7;
     background-color: var(--bgGeneral);
 }
 .container-boira {
-    padding: 0 1.25rem;
+    padding: 0 2rem;
 }
 img {
     max-width: 100%;
@@ -346,8 +312,8 @@ h5,
 h6 {
     font-weight: 700;
     color: #001F3F;
-    font-family: var(--fontSystem);
-    font-family: var(--fontSystem);
+    font-family: 'Rubik', sans-serif;
+    font-family: var(--fontTitle);
 }
 h1,
 h2,
@@ -361,7 +327,9 @@ p {
     -webkit-font-smoothing: antialiased;
 }
 .post-contenido-container:not(:last-child) {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
     }
 .page-heading {
     font-size: 2.5rem;
@@ -376,9 +344,6 @@ p {
     text-decoration: none;
     color: #001F3F;
 }
-.categoria-titulo h1 {
-        font-size: 1.13rem;
-    }
 .categoria-titulo-index {
     font-family: 'Rubik', sans-serif;
     font-family: var(--fontTitle);
@@ -430,7 +395,7 @@ p {
     text-decoration: none;
     color: #121;
     color: var(--impureBlack);
-    font-size: 1rem;
+    font-size: .88rem;
 }
 .post-contenido-enlace:visited {
         color: #121;
@@ -464,9 +429,6 @@ blockquote {
         color: var(--clrArchivo);
         font-weight: 600;
     }
-.post-contenido.enlaces {
-    margin: 1.25rem auto;
-}
 .post-leer-mas {
     font-size: 1.25rem;
     font-weight: 600;
@@ -475,18 +437,14 @@ blockquote {
     color: var(--impureBlack);
 }
 .panel-poison {
-    margin-top: 20px;
+    margin-top: 2rem;
     text-align: left;
-    padding: 1.25rem 0;
+    padding: 2rem 0;
     font-size: 0;
 }
-.panel-poison svg {
-        width: 20px;
-        height: 20px;
-    }
 .panel-poison-left,
 .panel-poison-right {
-    font-size: 0.88rem;
+    font-size: 1rem;
     display: inline-block;
     width: 100%;
 }
@@ -708,15 +666,6 @@ p code {
     color: #121;
     color: var(--impureBlack);
 }
-.post-autores-tag {
-    font-size: 0.88rem;
-    background-color: #E5EDB7;
-    color: #642626;
-    text-decoration: none;
-    padding: 0 0.31rem;
-    margin: 0 0.31rem 0.63rem 0;
-    display: inline-block;
-}
 .btn {
     font-size: 1rem;
     text-decoration: none;
@@ -729,7 +678,7 @@ p code {
     background-color: #f8f8ff;
     display: inline-block;
     width: auto;
-    max-width: 250px;
+    max-width: 15rem;
 }
 .btn:hover {
         background-color: #121;
@@ -742,7 +691,7 @@ p code {
     margin: 0 auto;
 }
 .btn-posterior {
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 .scalable-leanpub {
     font-size: 1rem;
@@ -750,8 +699,8 @@ p code {
     display: inline-block;
     color: #28323e;
     text-decoration: none;
-    padding: 0.63rem 0;
-    margin: 0.63rem 0;
+    padding: 1rem 0;
+    margin: 1rem 0;
     border-top: 1px solid #e2d3d3;
     border-bottom: 1px solid #e2d3d3;
 }
@@ -769,30 +718,6 @@ p code {
 .border-excerpt p {
         margin: 0;
     }
-.va-m {
-    display: inline-block;
-    vertical-align: middle;
-}
-.compartir {
-    margin: 0.63rem 0;
-}
-.compartir .compartir-twitter,
-    .compartir .compartir-facebook,
-    .compartir .compartir-google {
-        text-decoration: none;
-        color: #fff;
-        padding: 0.31rem 0.63rem;
-        font-size: 0.88rem;
-    }
-.compartir .compartir-twitter {
-        background-color: #55ACEE;
-    }
-.compartir .compartir-facebook {
-        background-color: #3B5998;
-    }
-.compartir .compartir-google {
-        background-color: #DC4E41;
-    }
 .articulo-tag {
     font-size: 1.13rem;
     text-decoration: none;
@@ -808,33 +733,15 @@ p code {
 .archivo li {
     margin: 0.63rem 0;
 }
-/* ===== == = === desde 48em (768px) === = == ===== */
 @media only screen and (min-width: 48em) {
-    .header-nav {
-        padding-top: 15px;
-        font-size: 0;
-        display: block;
-    }
-    .menu-principal {
-        padding: 0;
-        width: 50%;
-    }
-    .menu-principal-li a {
-        padding: 0;
-        display: inline-block;
-        border-bottom: 0;
-    }
-    .social-header.post-contenido {
-        width: 49%;
-        display: inline-block;
-        text-align: right;
-    }
+
     iframe {
         max-width: 600px;
     }
+
     .container-boira {
-        width: 80%;
-        margin: 0 auto;
+        width: 40rem;
+        margin-left: 10vw;
     }
 
     .header,
@@ -842,6 +749,7 @@ p code {
     .categorita-titulo {
         padding: 0;
     }
+
     .panel-poison.post-contenido {
         margin: 1.88rem 0;
     }
@@ -871,25 +779,6 @@ p code {
     .btn-posterior,
     .btn-anterior {
       display: inline-block;
-    }
-
-}
-/* ===== == = === 64em (1024px) === = == ===== */
-@media only screen and (min-width: 64em) {
-    .container-boira {
-        width: 60%;
-        margin: 0 auto;
-        max-width: 900px;
-    }
-    .enlaces {
-      margin-bottom: 20px;
-    }
-
-}
-/* ===== == = === 64em (1367px) === = == ===== */
-@media only screen and (min-width: 85.43em) {
-    .container-boira {
-        width: 50%;
     }
 }
 
