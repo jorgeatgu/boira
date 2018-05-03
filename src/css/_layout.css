@@ -27,25 +27,21 @@ iframe {
     font-weight: 700;
     color: #001F3F;
     font-family: var(--fontTitle);
+    line-height: 1.1;
 }
 
-:--textos {
+:--textos,
+:--cabeceras {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 
 .post-contenido-container {
     &:not(:last-child) {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         border-bottom: 1px solid #ccc;
         padding-bottom: 1rem;
     }
-}
-
-.page-heading {
-    font-size: 40px;
-    color: salmon;
-    font-weight: 700;
 }
 
 .color-autor {
@@ -72,20 +68,20 @@ iframe {
 }
 
 .articulo-fecha {
-    width: 100%;
-    font-size: 14px;
+    font-size: 12px;
     font-family: var(--fontSystem);
-    margin: 0;
     font-weight: 700;
     color: var(--clrAutores);
     text-align: left;
+    margin: 0;
+    width: 100%;
 }
 
 .categoria-fecha {
     font-size: 14px;
     color: #E45C5B;
     text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
 }
 
 .post-contenido {
@@ -108,9 +104,6 @@ iframe {
     text-decoration: none;
     color: var(--impureBlack);
     font-size: .88rem;
-    &:visited {
-        color: var(--impureBlack);
-    }
 }
 
 .post-contenido-texto {
@@ -129,8 +122,8 @@ iframe {
 
 blockquote {
     background-color: #ECF0F5;
-    padding: 16px;
-    margin: 20px;
+    padding: 1rem;
+    margin: 1.5rem;
     border-left: 7px solid crimson;
 }
 
@@ -142,11 +135,4 @@ blockquote {
         color: var(--clrArchivo);
         font-weight: 600;
     }
-}
-
-.post-leer-mas {
-    font-size: 20px;
-    font-weight: 600;
-    display: block;
-    color: var(--impureBlack);
 }
