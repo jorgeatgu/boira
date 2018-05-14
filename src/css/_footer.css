@@ -8,11 +8,15 @@
 .panel-poison-left,
 .panel-poison-right {
     font-size: 1rem;
+    font-family: var(--fontTitle);
     display: inline-block;
     width: 100%;
 }
 
 .footer-l {
-    text-decoration: none;
     color: var(--impureBlack);
+    font-weight: 400;
+    &:hover {
+        font-weight: bold;
+    }
 }

@@ -352,11 +352,8 @@ h6 {
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 0;
+    margin: 0 0 1rem;
     width: 100%;
-}
-.categoria-titulo h1,
-.post-contenido h1 {
-    margin: 0;
 }
 .articulo-fecha {
     font-size: 0.75rem;
@@ -387,11 +384,7 @@ h6 {
     color: var(--impureBlack);
 }
 .post-contenido strong {
-        font-family: var(--fontSystem);
-        font-family: var(--fontSystem);
-    }
-.post-contenido p {
-        margin-top: 0;
+        font-weight: bold;
     }
 .post-contenido-enlace {
     text-decoration: none;
@@ -436,14 +429,19 @@ blockquote {
 .panel-poison-left,
 .panel-poison-right {
     font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-family: var(--fontTitle);
     display: inline-block;
     width: 100%;
 }
 .footer-l {
-    text-decoration: none;
     color: #121;
     color: var(--impureBlack);
+    font-weight: 400;
 }
+.footer-l:hover {
+        font-weight: bold;
+    }
 /* stylelint-disable */
 pre,
 code {

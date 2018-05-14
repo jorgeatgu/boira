@@ -59,12 +59,8 @@ iframe {
     font-size: 1.5rem;
     text-transform: uppercase;
     padding: 0;
+    margin: 0 0 1rem;
     width: 100%;
-}
-
-.categoria-titulo h1,
-.post-contenido h1 {
-    margin: 0;
 }
 
 .articulo-fecha {
@@ -93,10 +89,7 @@ iframe {
     list-style: none;
     color: var(--impureBlack);
     strong {
-        font-family: var(--fontSystem);
-    }
-    p {
-        margin-top: 0;
+        font-weight: bold;
     }
 }
 
