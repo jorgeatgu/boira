@@ -1,22 +1,23 @@
 .panel-poison {
-	margin-top: 20px;
-	text-align: left;
-	padding: 20px 0;
-  font-size: 0;
-  svg {
-    width: 20px;
-    height: 20px;
-  }
+    margin-top: 1.5rem;
+    text-align: left;
+    padding: 1rem 0;
+    font-size: 0;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 .panel-poison-left,
 .panel-poison-right {
-  font-size: 14px;
-  display: inline-block;
-  width: 100%;
+    font-size: .75rem;
+    display: inline-block;
+    width: 100%;
 }
 
 .footer-l {
-  text-decoration: none;
-  color: var(--impureBlack);
+    text-decoration: none;
+    color: var(--impureBlack);
 }

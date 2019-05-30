@@ -10,7 +10,7 @@ url: http://jorgeatgu.com/blog
 baseurl: /blog
 paginate: 5
 paginate_path: "page:num"
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 urliconosheader: ../img/social-sprite.svg
 urliconos: /img/social-sprite.svg

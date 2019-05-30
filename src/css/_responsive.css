@@ -1,54 +1,59 @@
 /* ===== == = === desde 48em (768px) === = == ===== */
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 48rem) {
     .header-nav {
-        padding-top: 15px;
+        padding-top: 1rem;
         font-size: 0;
         display: block;
     }
+
     .menu-principal {
         padding: 0;
         width: 50%;
     }
+
     .menu-principal-li a {
         padding: 0;
         display: inline-block;
         border-bottom: 0;
     }
+
     .social-header.post-contenido {
         width: 49%;
         display: inline-block;
         text-align: right;
     }
+
     iframe {
         max-width: 600px;
     }
+
     .container-boira {
         width: 80%;
         margin: 0 auto;
     }
 
-    .header,
     .post-contenido,
     .categorita-titulo {
         padding: 0;
     }
+
     .panel-poison.post-contenido {
-        margin: 30px 0;
+        margin: 2rem 0;
     }
 
     .categoria-titulo h1,
     .categoria-titulo-index {
-        font-size: 30px;
+        font-size: 1.25rem;
     }
 
     .panel-poison-left,
     .panel-poison-right {
-      width: 50%;
+        width: 50%;
     }
 
     .panel-poison-right {
-      text-align: right;
+        text-align: right;
     }
 
     .btn-posterior {
@@ -61,26 +66,27 @@
 
     .btn-posterior,
     .btn-anterior {
-      display: inline-block;
+        display: inline-block;
     }
 
 }
 
-/* ===== == = === 64em (1024px) === = == ===== */
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 64rem) {
     .container-boira {
-        width: 60%;
+        width: 40rem;
         margin: 0 auto;
-        max-width: 900px;
+        max-width: 40rem;
     }
+
     .enlaces {
-      margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 
 }
+
 /* ===== == = === 64em (1367px) === = == ===== */
 
-@media only screen and (min-width: 85.43em) {
+@media only screen and (min-width: 85.43rem) {
     .container-boira {
         width: 50%;
     }

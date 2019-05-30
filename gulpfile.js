@@ -1,58 +1,89 @@
-var gulp = require('gulp');
-postcss = require('gulp-postcss');
-autoprefixer = require('gulp-autoprefixer');
-sourcemaps = require('gulp-sourcemaps');
-atImport = require('postcss-import');
-cssnext = require('postcss-cssnext');
-sorting = require('postcss-sorting');
-nested = require('postcss-nested');
-pxtorem = require('postcss-pxtorem');
-reporter = require('postcss-reporter');
-uglify = require('gulp-uglify');
-newer = require('gulp-newer');
-nano = require('gulp-cssnano');
-notify = require("gulp-notify");
-stylelint = require('stylelint');
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const atImport = require('postcss-import');
+const selector = require('postcss-custom-selectors');
+const customProperties = require('postcss-custom-properties');
+const sorting = require('postcss-sorting');
+const nested = require('postcss-nested');
+const reporter = require('postcss-reporter');
+const imagemin = require('gulp-imagemin');
+const newer = require('gulp-newer');
+const nano = require('gulp-cssnano');
+const notify = require('gulp-notify');
+const stylelint = require('stylelint');
+const browserSync = require('browser-sync');
+const terser = require('gulp-terser');
+const babel = require('gulp-babel');
+const postcssNormalize = require('postcss-normalize');
 
+var paths = {
+    js: 'src/js',
+    css: 'src/css',
+    images: 'src/img/*',
+    buildCss: 'css/',
+    buildJs: 'js/',
+    buildImages: 'img/'
+};
 
-/* Variables */
-var imgSrc = './src/img/*';
-var imgDist = './img';
-var jsSrc = './src/js/*.js';
-var jsDist = './js';
+var watch = {
+    js: [paths.js + '/**/*.js'],
+    css: [paths.css + '/**/*.css'],
+    minifycss: [paths.buildCss + '/**/*.css'],
+    images: [paths.images + '/**/*.*'],
+    html: ['/*.html']
+};
+
+gulp.task('browserSync', function() {
+    browserSync({
+        server: {
+            baseDir: './',
+            reloadDelay: 200
+        },
+        online: true
+    });
+});
+
+gulp.task('babel', () =>
+    gulp
+        .src(watch.js)
+        .pipe(newer(paths.js))
+        .pipe(
+            babel({
+                presets: ['@babel/preset-env']
+            })
+        )
+        .on('error', errorAlertJS)
+        .pipe(gulp.dest(paths.buildJs))
+        .pipe(
+            notify({
+                message: 'JavaScript complete'
+            })
+        )
+);
 
 /* Notificando errores de JavaScript */
 function errorAlertJS(error) {
-  notify.onError({
-    title: "Gulp JavaScript",
-    subtitle: "Algo esta mal en tu JavaScript!",
-    sound: "Basso"
-  })(error);
-  console.log(error.toString());
-  this.emit("end");
-};
+    notify.onError({
+        title: 'Gulp JavaScript',
+        subtitle: 'Algo esta mal en tu JavaScript!',
+        sound: 'Basso'
+    })(error);
+    console.log(error.toString());
+    this.emit('end');
+}
 
 /* Notificando errores de CSS */
 function errorAlertPost(error) {
-  notify.onError({
-    title: "Gulp postCSS",
-    subtitle: "Algo esta mal en tu CSS!",
-    sound: "Basso"
-  })(error);
-  console.log(error.toString());
-  this.emit("end");
-};
-
-/* Comprimiendo JavaScript */
-gulp.task('compress', function() {
-  return gulp.src(jsSrc)
-    .pipe(uglify())
-    .on("error", errorAlertJS)
-    .pipe(gulp.dest(jsDist))
-    .pipe(notify({
-      message: 'JavaScript complete'
-    }));
-});
+    notify.onError({
+        title: 'Gulp postCSS',
+        subtitle: 'Algo esta mal en tu CSS!',
+        sound: 'Basso'
+    })(error);
+    console.log(error.toString());
+    this.emit('end');
+}
 
 /* ==========================================================================
    Lanzando postCSS
@@ -63,76 +94,117 @@ gulp.task('compress', function() {
  *
  * Antes de que nuestro CSS empiece a ser transformado por los diferentes
  * plugins vamos a 'lintear' nuestro CSS para seguir un orden y concierto.
- * este párrafo.
+ *
  *
  */
 
 gulp.task('css', function() {
-  var processors = [
-    atImport,
-    nested,
-    stylelint(),
-    reporter({
-      clearMessages: true
-    }),
-    cssnext,
-    pxtorem({
-      root_value: 16,
-      unit_precision: 2,
-      prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'padding'],
-      replace: true,
-      media_query: false
-    }),
-    sorting({
-      "sort-order": "csscomb"
-    }),
-    autoprefixer
-  ];
-  return gulp.src('./src/css/styles.css')
-    .pipe(sourcemaps.init())
-    .pipe(postcss(processors))
-    .on("error", errorAlertPost)
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'))
-    .pipe(notify({
-      message: 'postCSS complete'
-    }));
+    var processors = [
+        atImport({
+            plugins: [stylelint]
+        }),
+        stylelint,
+        reporter({
+            clearMessages: true
+        }),
+        nested,
+        customProperties,
+        selector,
+        sorting({
+            'sort-order': 'csscomb'
+        }),
+        autoprefixer,
+        postcssNormalize({
+            browsers: 'last 2 versions',
+            forceImport: true
+        })
+    ];
+    return gulp
+        .src('./src/css/styles.css')
+
+        .pipe(sourcemaps.init())
+        .pipe(postcss(processors))
+        .on('error', errorAlertPost)
+        .pipe(
+            sourcemaps.write('./', {
+                sourceRoot: '/src'
+            })
+        )
+        .pipe(gulp.dest(paths.buildCss))
+        .pipe(browserSync.stream())
+        .pipe(
+            notify({
+                message: 'postCSS complete'
+            })
+        );
 });
 
 /* Lanzando CSSnano para comprimir CSS */
 gulp.task('minify', function() {
-  return gulp.src('./css/styles.css')
-    .pipe(nano())
-    .pipe(gulp.dest('./css'))
-    .pipe(notify({
-      message: 'CSSnano task complete'
-    }));
+    return (
+        gulp
+            .src(watch.minifycss)
+            // Remove comments false //Z index
+            .pipe(nano())
+            .pipe(gulp.dest(paths.buildCss))
+            .pipe(
+                notify({
+                    message: 'CSSnano task complete'
+                })
+            )
+    );
 });
 
 /* Comprimiendo imagenes */
 gulp.task('imagemin', function() {
-  return gulp.src(imgSrc)
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{
-        removeViewBox: false
-      }],
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest(imgDist));
+    return gulp
+        .src(paths.images)
+        .pipe(
+            imagemin({
+                progressive: true,
+                svgoPlugins: [
+                    {
+                        removeViewBox: false
+                    }
+                ],
+                use: [pngquant()]
+            })
+        )
+        .pipe(gulp.dest(paths.buildImages));
 });
 
 gulp.task('images', function() {
-  return gulp.src(imgSrc)
-    .pipe(newer(imgDist))
-    .pipe(imagemin())
-    .pipe(gulp.dest(imgDist));
+    return gulp
+        .src(paths.images)
+        .pipe(newer(paths.images))
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.buildImages));
+});
+
+/* Comprimiendo JavaScript */
+gulp.task('compress', function() {
+    return gulp
+        .src(watch.js)
+        .pipe(terser())
+        .on('error', errorAlertJS)
+        .pipe(gulp.dest(paths.buildJs))
+        .pipe(
+            notify({
+                message: 'JavaScript complete'
+            })
+        );
 });
 
 /* Tarea por defecto para compilar CSS y comprimir imagenes */
-gulp.task('default', function() {
-  gulp.watch('./src/css/*.css', ['css']);
+gulp.task('default', ['browserSync'], function() {
+    // Add interval to watcher!
+    gulp.watch(watch.css, { interval: 300 }, ['css']);
+    gulp.watch(watch.images, { interval: 300 }, ['images']);
+    gulp.watch(['*.html', 'css/*.css', 'js/*.js', './*.csv', './*.json']).on(
+        'change',
+        browserSync.reload
+    );
 });
 
-/* Tarea final para comprimir CSS y JavaScript */
+// Build minify CSS/JS
 gulp.task('build', ['minify', 'compress']);
